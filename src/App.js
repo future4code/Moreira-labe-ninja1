@@ -1,9 +1,12 @@
 import React from 'react'
-import { AppContainer } from './components/AppContainer'
-
+import RoutesApp from './routes';
+import Header from './components/HeaderHome/index'
 function App() {
 	return (
-        <AppContainer />
+      <div>
+        <Header/>
+        < RoutesApp />
+      </div>
 	)
 }
 
