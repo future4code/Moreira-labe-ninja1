@@ -1,9 +1,9 @@
 import React from 'react'
-import { AppContainer } from './components/AppContainer'
+import RoutesApp from './routes';
 
 function App() {
 	return (
-        <AppContainer />
+        < RoutesApp />
 	)
 }
 
