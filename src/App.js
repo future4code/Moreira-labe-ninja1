@@ -1,9 +1,15 @@
 import React from 'react'
 import RoutesApp from './routes';
+import MainHome from './components/MainHome/index';
+import Styled from 'styled-components';
 
 function App() {
 	return (
-        < RoutesApp />
+		<div>
+			<MainHome/>
+			 < RoutesApp />
+		</div>
+       
 	)
 }
 

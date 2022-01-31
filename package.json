@@ -13,6 +13,7 @@
     "react-jss": "8.0.0",
     "react-router-dom": "^6.2.1",
     "react-scripts": "^3.4.3",
+    "styled-component": "^2.8.0",
     "styled-components": "^5.1.0"
   },
   "scripts": {
