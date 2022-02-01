@@ -4,7 +4,7 @@ class ListServicos extends Component {
     render() {
         return (
             <div>
-                
+                Teste
             </div>
         );
     }
