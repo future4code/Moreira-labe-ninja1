@@ -2,7 +2,31 @@ import React, { Component } from 'react';
 import {Button, ContainerPagina} from './styled';
 import {Link} from 'react-router-dom';
 
+const Button = styled.button`
+    position: absolute;
+    width: 320px;
+    height: 82px;
+    left: 76px;
+    top: 500px;
+    background: #1DAE9D;
+    border-radius: 10px;
+    font-size: 20px;
+`
 
+const ContainerPagina = styled.div`
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 5px;
+    margin-left: 5px;
+`
 class MainHome extends Component {
     render() {
         return (
