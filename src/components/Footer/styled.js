@@ -8,7 +8,7 @@ justify-content: space-between;
 align-items: center;
 background-color: white;
 padding: 1em;
-border-top: 2px solid #1DAE9D;   
+border-top: 2px solid #1DAE9D; 
 `
 
 export const RedesSociais = styled.div`

@@ -6,7 +6,6 @@ export const ContainerServicos = styled.div`
     flex-direction: column;
     justify-content: space-between;
 
-
 `
 
 export const Container = styled.div`
