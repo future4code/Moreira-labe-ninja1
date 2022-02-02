@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'
-
-import { } from './styled'
-
+import { BsHandbag } from "react-icons/bs";
+import {Header, Img, DivSacola, DivNav, Botao,  } from './styled';
+import {Link} from 'react-router-dom';
+import {MdKeyboardArrowLeft} from 'react-icons/md';
 
 
 
 class HeaderAll extends Component {
+
     render() {
         return (
-            <div>
-                Hello HeaderAll
-            </div>
+            <Header>
+                 <Link to="/"><Botao><MdKeyboardArrowLeft/>Voltar</Botao></Link>
+               
+                  <Img src="https://i.postimg.cc/wj5LbG8M/Logo-Est-tica-2.png"></Img>
+               
+                <DivNav>
+                <DivSacola><Link to="/carrinho"><BsHandbag/></Link></DivSacola>
+                </DivNav> 
+                
+            </Header>
+
+ 
+
         );
     }
 }

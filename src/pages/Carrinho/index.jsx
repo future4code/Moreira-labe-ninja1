@@ -4,9 +4,15 @@ import {AiOutlineDelete} from 'react-icons/ai'
 
 import {Container} from './styled'
 
+import HeaderAll from '../../components/HeaderAll';
+
+import Footer from '../../components/Footer';
+
 class Carrinho extends Component {
     render() {
         return (
+            <>
+            <HeaderAll/>
             <Container>
                 <div className="container_cart">
                     <div className="header">
@@ -50,6 +56,8 @@ class Carrinho extends Component {
                 
                 </div>
             </Container>
+            <Footer/>
+            </>
         );
     }
 }

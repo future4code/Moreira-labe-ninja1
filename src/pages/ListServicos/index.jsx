@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 
 import {Container} from './styled'
 
+import HeaderAll from '../../components/HeaderAll';
+
+import Footer from '../../components/Footer';
+
 class ListServicos extends Component {
     render() {
         return (
+            <>
+             <HeaderAll/>
             <Container>
             <div className="container_search">
                 <input type="text" placeholder="Valor Minimo" />
@@ -108,10 +114,9 @@ class ListServicos extends Component {
             <div>
             </div>    
             </div>
-            </div>
-            </div>
             </Container>
-            
+            <Footer/>
+            </>
         );
     }
 }
