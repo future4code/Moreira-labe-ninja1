@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-    position: absolute;
     width: 280px;
     height: 82px;
-    left: 76px;
-    top: 500px;
     background: #c1faf3;
     color: black;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border: none;
     font-size: 20px;
+    margin-bottom: 32px;
+    
         :hover{
             background-color: #2d6b64;
             color:white;
@@ -24,16 +24,38 @@ export const Button = styled.button`
 `
 
 export const ContainerPagina = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: stretch;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 3fr 4fr 1fr;
+    grid-column-end: 3;
+    padding-top: 30px;
+    padding-bottom: 30px;
     font-size: 20px;
+    text-align: justify;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-right: 5px;
-    margin-left: 5px;
-`
+    line-height: 2em;
+    justify-items: center;
+    align-items: center;
+    background-color: #1DAE9D;
+    color: white;
 
+    .sectionLeft{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 20px;
+
+    }
+
+    .sectionRight{
+        display: flex;
+
+    }
+
+ 
+`
+export const Img = styled.img`
+   width: 30%;
+   bottom: 320px;
+   position: relative;
+   left: 70px;
+`

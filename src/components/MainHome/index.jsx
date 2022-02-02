@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import {Button, ContainerPagina} from './styled';
+import {Button, ContainerPagina, Img} from './styled';
 import {Link} from 'react-router-dom';
-
+import AnimationData from '../Animacao/anima'; 
 
 class MainHome extends Component {
     render() {
         return (
-            <div>
-                      
+             
                 <ContainerPagina>
-                    
+                    <div className='sectionLeft'>
+                        
                         <p>
+
                                 <h1>Quem somos?</h1>
                             Somos uma plataforma que conecta clientes e profissionais, 
                             com mais de 100 tipos de serviços disponíveis.
@@ -27,11 +28,15 @@ class MainHome extends Component {
                             habilidades ninjas, pois acreditamos que em todo mundo há uma história 
                             de sucesso que podemos tornar realidade.
                         </p>
-
+                        
                     <Link to="/listservivos"><Button>Descubra</Button></Link>
+                    </div>
+                   
+                    <div className='sectionRight'><AnimationData/></div>
+                    <Img src="https://pulsus.mobi/wp-content/uploads/2021/07/SELOGPTW.png" alt="" />
                 </ContainerPagina>
                
-          </div>
+         
         );
     }
 }
