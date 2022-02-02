@@ -106,8 +106,10 @@ class ListServicos extends Component {
                         
                 </ul>
             <div>
+            </div>    
             </div>
             </Container>
+            
         );
     }
 }

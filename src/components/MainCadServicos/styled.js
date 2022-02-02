@@ -48,6 +48,8 @@ export const Container = styled.div`
         font-weight: bold;
         line-height: 146.28%;
         background-color: #FFFFFF;
+        
+        color: #AEB6C1;
 
 
     }
