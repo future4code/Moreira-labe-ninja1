@@ -3,7 +3,6 @@ import {Button, ContainerPagina, Img} from './styled';
 import {Link} from 'react-router-dom';
 import AnimationData from '../Animacao/anima'; 
 
-
 class MainHome extends Component {
     render() {
         return (

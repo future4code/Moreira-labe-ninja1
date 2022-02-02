@@ -13,10 +13,13 @@ class MainCadServicos extends Component {
                         <input type="text" placeholder="Digite um titulo"/>
                         <input type="text" placeholder="Digite um titulo"/>
                         <select>
-                            <option value="name"> Título </option>
-                            <option value="value"> Preço </option>
+                            <option value="name"> Cartão de Débito </option>
+                            <option value="value"> Cartão de Crédito </option>
+                            <option value="value"> PayPal </option>
+                            <option value="value"> Boleto </option>
+                            <option value="value"> Pix </option>
                         </select>
-                        <input type="text" placeholder="Digite um titulo"/>
+                        <input type="date" placeholder="dd/mm/aaaa"/>
                         <div className="form_button">
                             <button>Cadastrar Serviço</button>
                         </div>
