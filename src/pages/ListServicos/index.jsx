@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {Container} from './styled'
+import {Container, ContainerServicos} from './styled'
 
 import HeaderAll from '../../components/HeaderAll';
 
@@ -9,7 +9,7 @@ import Footer from '../../components/Footer';
 class ListServicos extends Component {
     render() {
         return (
-            <>
+            <ContainerServicos>
              <HeaderAll/>
             <Container>
             <div className="container_search">
@@ -116,7 +116,7 @@ class ListServicos extends Component {
             </div>
             </Container>
             <Footer/>
-            </>
+            </ContainerServicos>
         );
     }
 }
