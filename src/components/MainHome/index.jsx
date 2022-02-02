@@ -1,40 +1,18 @@
 import React, { Component } from 'react';
-import {Button, ContainerPagina} from './styled';
+import {Button, ContainerPagina, Img} from './styled';
 import {Link} from 'react-router-dom';
+import AnimationData from '../Animacao/anima'; 
 
-const Button = styled.button`
-    position: absolute;
-    width: 320px;
-    height: 82px;
-    left: 76px;
-    top: 500px;
-    background: #1DAE9D;
-    border-radius: 10px;
-    font-size: 20px;
-`
 
-const ContainerPagina = styled.div`
-    display: flex;
-    height: 100vh;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: stretch;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    margin-top: 50px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-right: 5px;
-    margin-left: 5px;
-`
 class MainHome extends Component {
     render() {
         return (
-            <div>
-                      
+             
                 <ContainerPagina>
-                    
+                    <div className='sectionLeft'>
+                        
                         <p>
+
                                 <h1>Quem somos?</h1>
                             Somos uma plataforma que conecta clientes e profissionais, 
                             com mais de 100 tipos de serviços disponíveis.
@@ -51,11 +29,15 @@ class MainHome extends Component {
                             habilidades ninjas, pois acreditamos que em todo mundo há uma história 
                             de sucesso que podemos tornar realidade.
                         </p>
-
+                        
                     <Link to="/listservivos"><Button>Descubra</Button></Link>
+                    </div>
+                   
+                    <div className='sectionRight'><AnimationData/></div>
+                    <Img src="https://pulsus.mobi/wp-content/uploads/2021/07/SELOGPTW.png" alt="" />
                 </ContainerPagina>
                
-          </div>
+         
         );
     }
 }
