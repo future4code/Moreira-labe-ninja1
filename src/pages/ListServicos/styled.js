@@ -1,9 +1,18 @@
 import styled from 'styled-components'
 
+
+export const ContainerServicos = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+`
+
 export const Container = styled.div`
     margin: 0 auto;
     width: 90%;
-    height: 90vh;
+    height: 100vh;
 
     .container_search {
         height: 100px;
