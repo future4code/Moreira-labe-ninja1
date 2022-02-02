@@ -46,6 +46,13 @@ const MeiosPagamento = styled.div`
     align-items: center;
 `
 
+const Colunas1 = styled.div`
+    color: #f1189e;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 15px;
+`
+
 class Footer extends Component {
     render() {
         return (
@@ -59,9 +66,24 @@ class Footer extends Component {
                    <ImLinkedin2/>
                </RedesSociais>               
 
-               <div>Institucional</div>
-               <div>Informações</div>
-               <div>Conheça</div>
+               <div>
+                   <Colunas1>Institucional</Colunas1>
+                    <p>A Marca</p>
+                    <p>Lojas</p>
+                    <p>Contato</p>
+               </div>
+               <div>
+                   <Colunas1>Informações</Colunas1> 
+                    <p>Formas de Pagamento</p>
+                    <p>Trocas e Devoluções</p>
+                    <p>Cuidados com o Produto</p>
+               </div>
+               <div>
+                   <Colunas1>Conheça</Colunas1> 
+                    <p>Franquias e Multimarcas</p>
+                    <p>Trabalhe com a Gente</p>
+                    <p>Procon-RJ</p>
+               </div>
                <MeiosPagamento>
                    <SiVisa/>
                    <RiMastercardLine/>
