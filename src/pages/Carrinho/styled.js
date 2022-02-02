@@ -6,7 +6,7 @@ export const Container = styled.div`
     align-content: space-around;
     justify-content: space-around;
     align-items: center;
-    margin: 0 auto;
+    margin: 50px auto;
     background: #1DAE9D;
     width: 70%;
     height: 80vh;
