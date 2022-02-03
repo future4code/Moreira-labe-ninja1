@@ -144,4 +144,11 @@ export const Container = styled.div`
         grid-template-columns: 3fr 1fr;
         gap: 50px;               
     }
+      .containerMainListOff {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
 `;
+
+
