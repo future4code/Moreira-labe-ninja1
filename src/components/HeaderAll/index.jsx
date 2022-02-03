@@ -16,7 +16,13 @@ class HeaderAll extends Component {
                   <Img src="https://i.postimg.cc/wj5LbG8M/Logo-Est-tica-2.png"></Img>
                
                 <DivNav>
-                <DivSacola><Link to="/carrinho"><BsHandbag/></Link></DivSacola>
+                <DivSacola>
+                    <Link to="/carrinho">
+                    <BsHandbag/>
+                    {this.props.countCartItens ? (<span>{this.props.countCartItens}</span>):("")}
+                    </Link>
+                    </DivSacola>
+
                 </DivNav> 
                 
             </Header>
