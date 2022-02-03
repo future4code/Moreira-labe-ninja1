@@ -21,9 +21,31 @@ const headers = {
 class ListServicos extends Component {
   state = {
     cardList: [],
-        cartItens: []
+        cartItens: [],
+        query: "",
+        minPrice: "",
+        maxPrice: "",
+        order:""
+        
   };
 
+  updateQuery =(ev) => {
+    this.setState({query: ev.target.value});
+
+  }
+
+  updateMinPrice =(ev) => {
+    this.setState({minPrice: ev.target.value});
+  }
+
+  updateMaxPrice =(ev) => {
+    this.setState({maxPrice: ev.target.value});
+  }
+
+  updateOrder =(ev) => {
+    this.setState({order: ev.target.value});
+  }
+  
   componentDidMount() {
     this.getCardList();
   }
@@ -56,6 +78,8 @@ class ListServicos extends Component {
     }
 
 
+  
+
 
   render() {
       const somaPrecos = this.state.cartItens.reduce((a,b) => a + b.price,0)
@@ -64,14 +88,65 @@ class ListServicos extends Component {
             <HeaderAll countCartItens={this.state.cartItens.length} />
             <Container>
           <div className="container_search">
-            <input type="text" placeholder="Valor Minimo" />
-            <input type="text" placeholder="Valor Maximo" />
-            <input type="text" placeholder="Busca por titulo ou descricao" />
-            <input type="text" placeholder="Sem Ordenacao" />
+            <input 
+            type="text" 
+            value={this.state.minPrice}
+            onChange={this.updateMinPrice}
+            placeholder="Valor Minimo" />
+
+            <input 
+            type="text"
+            value={this.state.maxPrice} 
+            onChange={this.updateMaxPrice}
+            placeholder="Valor Maximo" />
+            
+            <input 
+            type="text" 
+            value={this.state.updateQuery}
+            onChange={this.updateQuery}
+            placeholder="Busca por titulo ou descricao" />
+
+            <select
+            value={this.state.order}
+            onChange={this.updateOrder}
+            >
+            <option>Sem Ordenação</option>
+            <option>Menor Valor</option>
+            <option>Maior Valor</option>
+            <option>Título</option>
+            <option>Prazo</option>
+          </select>
+
+
           </div>
-          <div className = "containerMainList">
+          <div className={this.state.cartItens.length !== 0 ? "containerMainList" : "containerMainListOff"}>
+
             <div className="container_list">
-              {this.state.cardList.map((res) => (
+              {this.state.cardList.filter((filtro)=>{
+                return filtro.title.toLowerCase().includes(this.state.query.toLowerCase())
+              })
+              .filter((filtro)=>{
+                return (
+                  this.state.minPrice === "" || filtro.price >= this.state.minPrice
+                )
+              })
+              .filter((filtro)=>{
+                return (
+                  this.state.maxPrice === "" || filtro.price <= this.state.maxPrice
+                )
+              })
+              .sort((a,b)=>{
+                switch (this.state.order) {
+                  case "Menor Valor":
+                    return a.price - b.price
+                  case "Maior Valor":
+                    return b.price - a.price
+                  case "Title":
+                    return a.title.localeCompare(b.title)
+                  case "Prazo":
+                    return a.dueDate.localeCompare(b.dueDate)
+                 }
+              }).map((res) => (
                 <ul>
                   <li>
                     <div className="card">
