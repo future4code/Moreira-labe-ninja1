@@ -40,11 +40,11 @@ export const Container = styled.div`
     }
 
     .container_list li {
-        background-color: #1DAE9D;
+        /* background-color: #1DAE9D; */
         padding: 30px;
-        color: #FFFFFF;
+        color: #0000;
         font-weight: bold;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
         border-radius: 8px;                
     }
 
@@ -65,7 +65,7 @@ export const Container = styled.div`
     .card .price {
         margin: 10px;
         background-color: #FFFFFF;
-        width: 60px;
+        width: auto;
         color: #1DAE9D;
         border-radius: 8px;
         padding: 10px;
@@ -149,6 +149,87 @@ export const Container = styled.div`
         grid-template-columns: 1fr;
         gap: 50px;
       }
+    /* .ContentAll {
+        transition: transform 1s;
+        transform-style: preserve-3d;
+    }
+    .card:hover .ContentAll {
+        transform: rotateY(180deg);
+        transition: transform 0,5s;
+    }
+    .Front,
+    .Back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+    backface-visibility: hidden;
+  }
+    .Back {
+    background: #03446A;
+    color: white;
+    transform: rotateY( 180deg );
+  } */
+
+  .card {
+  width: 450px;
+  height: 300px;
+  perspective: 1000px;
+  padding: 20px;
+
+}
+
+.ContentAll {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card:hover .ContentAll {
+  transform: rotateY(180deg);
+}
+
+.Front, .Back {
+  position: absolute;
+    
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+.Front {
+  background-color: #1DAE9D;
+  color: black;
+  padding: 20px;
+}
+
+.Back {
+    position: absolute;
+    background-color: #1DAE9D;
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  transform: rotateY(180deg);
+}
 `;
 
 

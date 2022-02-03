@@ -8,7 +8,8 @@ import Footer from "../../components/Footer";
 
 import axios from "axios";
 
-import { AiOutlineDelete } from "react-icons/ai";
+import { AiOutlineDelete, AiOutlineEye } from "react-icons/ai";
+
 
 const url = "https://labeninjas.herokuapp.com/jobs";
 
@@ -76,10 +77,6 @@ class ListServicos extends Component {
         })
             this.setState({cartItens: newCart})
     }
-
-
-  
-
 
   render() {
       const somaPrecos = this.state.cartItens.reduce((a,b) => a + b.price,0)
@@ -149,14 +146,28 @@ class ListServicos extends Component {
               }).map((res) => (
                 <ul>
                   <li>
-                    <div className="card">
-                      <div>{res.title}</div>
-                      <div className="price">{res.price}</div>
-                      <div>{res.dueDate}</div>
-                      <div className="buttons_card">
-                        <button>Ver detalhes</button>
-                        <button onClick={()=> this.onClickAdd(res)} >Add Carrinho</button>
-                      </div>
+                  <div className="card">
+                    <div className="ContentAll">
+                      <div className="Front">
+                          <div>{res.title}</div>
+                          <div className="price">R$ {res.price.toFixed(2)}</div>
+                          <div>{res.dueDate}</div>
+                          <div className="buttons_card">
+                          <div><AiOutlineEye/></div>
+                          </div>
+                          </div>
+                            <div className="Back">
+                            <div>{res.title}</div>
+                            <div className="price">R$ {res.price.toFixed(2)}</div>
+                            <div>{res.dueDate}</div>
+                            <div>{res.description}</div>
+                            <div className="typePayments">{res.paymentMethods.map((res)=>
+                            (res))}</div>
+                            <div className="buttons_card">
+                            <button onClick={()=> this.onClickAdd(res)} >Add Carrinho</button>
+                          </div>
+                        </div>
+                        </div>
                     </div>
                   </li>
                 </ul>
@@ -164,6 +175,7 @@ class ListServicos extends Component {
               <div></div>
             </div>
             <div className="container_cart">
+
               <div className="header">
                 <p>Sacola</p>
               </div>
