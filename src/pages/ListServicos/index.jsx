@@ -8,8 +8,13 @@ import Footer from "../../components/Footer";
 
 import axios from "axios";
 
-import { AiOutlineDelete, AiOutlineEye } from "react-icons/ai";
+import { AiOutlineDelete, AiOutlineEye, AiOutlineShoppingCart } from "react-icons/ai";
+
 import Moment from "react-moment";
+
+import {Link} from 'react-router-dom';
+
+
 
 
 const url = "https://labeninjas.herokuapp.com/jobs";
@@ -164,7 +169,7 @@ class ListServicos extends Component {
                               <div className="title">{res.title}</div>
                               <div className="price">R$ {res.price.toFixed(2)}</div>
                               <div><Moment format="DD/MM/YYYY">{res.dueDate}</Moment></div>
-                              <div style={{marginTop: 10}}>{res.description}</div>
+                              <div style={{marginTop: 10, fontWeight: 600}}>{res.description}</div>
                               <div style={{border: '1px solid #FFFFFF',marginTop: 10, padding: 4}}>
                                 <div>Formas de Pagamento</div>
                                 <div className="typePayments">{res.paymentMethods.map((res)=>(
@@ -172,7 +177,7 @@ class ListServicos extends Component {
                                 ))}</div>
                               </div>
                               <div className="buttons_card">
-                                  <button onClick={()=> this.onClickAdd(res)} >Add Carrinho</button>
+                                  <button onClick={()=> this.onClickAdd(res)} ><AiOutlineShoppingCart style={{color:'#FFFFFF', fontSize: '200%'}}/></button>
                               </div>
                           </div>
                       </div>
@@ -207,7 +212,7 @@ class ListServicos extends Component {
               </div>
               <div className="footer">
                 <p>Total:R$ {somaPrecos}</p>
-                <button>Finalizar Compra</button>
+                <Link to="/carrinho"><button>Finalizar Compra</button></Link>
               </div>
             </div>
           </div>

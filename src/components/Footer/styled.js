@@ -25,7 +25,7 @@ align-items: center;
 export const MeiosPagamento = styled.div`
 display: flex;
 width: 15%;
-color: #f1189e;
+color: #1DAE9D;
 font-size: 1.5em;
 padding-right: 0.5em;
 flex-direction: row;
@@ -34,8 +34,13 @@ align-items: center;
 `
 
 export const Colunas1 = styled.div`
-color: #f1189e;
+color: black;
 font-weight: bold;
 font-size: 18px;
 margin-top: 15px;
+`
+
+export const Img = styled.img`
+   width: 4%;
+   
 `
