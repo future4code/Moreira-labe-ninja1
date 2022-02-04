@@ -17,10 +17,10 @@ class HeaderAll extends Component {
                
                 <DivNav>
                 <DivSacola>
-                    <Link to="/carrinho">
-                    <BsHandbag/>
-                    {this.props.countCartItens ? (<span>{this.props.countCartItens}</span>):("")}
-                    </Link>
+                    
+                    <BsHandbag style={{color: '#1DAE9D', fontSize: '100%'}}/>
+                    {this.props.countCartItens ? (<span className='contador'>{this.props.countCartItens}</span>):("")}
+                  
                     </DivSacola>
 
                 </DivNav> 

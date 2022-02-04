@@ -53,9 +53,4 @@ export const ContainerPagina = styled.div`
 
  
 `
-export const Img = styled.img`
-   width: 30%;
-   bottom: 320px;
-   position: relative;
-   left: 70px;
-`
+

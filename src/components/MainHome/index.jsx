@@ -33,7 +33,7 @@ class MainHome extends Component {
                     </div>
                    
                     <div className='sectionRight'><AnimationData/></div>
-                    <Img src="https://pulsus.mobi/wp-content/uploads/2021/07/SELOGPTW.png" alt="" />
+                   
                 </ContainerPagina>
                
          

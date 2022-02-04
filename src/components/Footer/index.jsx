@@ -9,7 +9,7 @@ import {SiVisa} from 'react-icons/si';
 import {RiMastercardLine} from 'react-icons/ri';
 import {RiPaypalLine} from 'react-icons/ri';
 import {SiPicpay} from 'react-icons/si';
-import {AreaFooter, RedesSociais, Colunas1, MeiosPagamento} from './styled';
+import {AreaFooter, RedesSociais, Colunas1, MeiosPagamento, Img} from './styled';
 
 
 class Footer extends Component {
@@ -49,6 +49,7 @@ class Footer extends Component {
                    <RiPaypalLine/>
                    <SiPicpay/>
                </MeiosPagamento>
+                <Img src="https://pulsus.mobi/wp-content/uploads/2021/07/SELOGPTW.png" alt="" />
             </AreaFooter>
         );
     }

@@ -52,8 +52,14 @@ export const Container = styled.div`
         border-radius: 8px;
         margin-right: 10px;
         cursor: pointer;
-        background-color: #FFFFFF;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        background-color: transparent;
+        transition: transform 0.5s;
+        :hover{
+        background-color: transparent;
+        color:white;
+        transform: scale(1.3);
+      }
+
     }
     .card .price {
         margin: 10px;
@@ -155,7 +161,7 @@ export const Container = styled.div`
   .card {
     position: relative;
     margin: 100px 0 0 0;
-    height: 42vh;
+    height: 400px;
     width: auto;
 
   }

@@ -17,6 +17,25 @@ export const Img = styled.img`
 export const DivSacola = styled.div`
 margin-left: 1em;
 font-size: 2.3em;
+position: relative;
+
+.contador{
+  height: 20px;
+  width: 20px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: red;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  top: 20px;
+  left:20px;
+
+}
+
 
 `
 
@@ -54,3 +73,4 @@ export const Botao = styled.button `
         color: white;
       }
 `
+
