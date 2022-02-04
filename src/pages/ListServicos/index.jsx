@@ -9,6 +9,7 @@ import Footer from "../../components/Footer";
 import axios from "axios";
 
 import { AiOutlineDelete, AiOutlineEye } from "react-icons/ai";
+import Moment from "react-moment";
 
 
 const url = "https://labeninjas.herokuapp.com/jobs";
@@ -80,6 +81,7 @@ class ListServicos extends Component {
 
   render() {
       const somaPrecos = this.state.cartItens.reduce((a,b) => a + b.price,0)
+      console.log(this.state.query)
         return (
         <ContainerServicos>
             <HeaderAll countCartItens={this.state.cartItens.length} />
@@ -104,13 +106,14 @@ class ListServicos extends Component {
             placeholder="Busca por titulo ou descricao" />
 
             <select
+            className="select"
             value={this.state.order}
             onChange={this.updateOrder}
             >
             <option>Sem Ordenação</option>
             <option>Menor Valor</option>
             <option>Maior Valor</option>
-            <option>Título</option>
+            <option>Titulo</option>
             <option>Prazo</option>
           </select>
 
@@ -138,43 +141,48 @@ class ListServicos extends Component {
                     return a.price - b.price
                   case "Maior Valor":
                     return b.price - a.price
-                  case "Title":
+                  case "Titulo":
                     return a.title.localeCompare(b.title)
                   case "Prazo":
                     return a.dueDate.localeCompare(b.dueDate)
                  }
               }).map((res) => (
+                
                 <ul>
-                  <li>
-                  <div className="card">
-                    <div className="ContentAll">
-                      <div className="Front">
-                          <div>{res.title}</div>
-                          <div className="price">R$ {res.price.toFixed(2)}</div>
-                          <div>{res.dueDate}</div>
-                          <div className="buttons_card">
-                          <div><AiOutlineEye/></div>
+                  <li className="card">
+                      <div className="content">
+                          <div className="front">
+                              <div className="title">{res.title}</div>
+                              <div className="price">R$ {res.price.toFixed(2)}</div>
+
+                              <div><Moment format="DD/MM/YYYY">{res.dueDate}</Moment></div>
+                              <div className="buttons_card">
+                                <div style={{fontSize:80, color: '#42d6b3'}}><AiOutlineEye/></div>
+                              </div>
                           </div>
+                          <div className="back">
+                              <div className="title">{res.title}</div>
+                              <div className="price">R$ {res.price.toFixed(2)}</div>
+                              <div><Moment format="DD/MM/YYYY">{res.dueDate}</Moment></div>
+                              <div style={{marginTop: 10}}>{res.description}</div>
+                              <div style={{border: '1px solid #FFFFFF',marginTop: 10, padding: 4}}>
+                                <div>Formas de Pagamento</div>
+                                <div className="typePayments">{res.paymentMethods.map((res)=>(
+                                  <ul><li>{res}</li></ul>
+                                ))}</div>
+                              </div>
+                              <div className="buttons_card">
+                                  <button onClick={()=> this.onClickAdd(res)} >Add Carrinho</button>
+                              </div>
                           </div>
-                            <div className="Back">
-                            <div>{res.title}</div>
-                            <div className="price">R$ {res.price.toFixed(2)}</div>
-                            <div>{res.dueDate}</div>
-                            <div>{res.description}</div>
-                            <div className="typePayments">{res.paymentMethods.map((res)=>
-                            (res))}</div>
-                            <div className="buttons_card">
-                            <button onClick={()=> this.onClickAdd(res)} >Add Carrinho</button>
-                          </div>
-                        </div>
-                        </div>
-                    </div>
+                      </div>
                   </li>
+                                
                 </ul>
+                
               ))}
-              <div></div>
             </div>
-            <div className="container_cart">
+            <div className={this.state.cartItens.length !== 0 ? "container_cart" : "container_cartOff"}>
 
               <div className="header">
                 <p>Sacola</p>
@@ -189,7 +197,7 @@ class ListServicos extends Component {
                             <strong>R$ {res.price}</strong>
                           </div>
                           <div>
-                            <AiOutlineDelete onClick={()=> this.onClickRemove(res.id)}/>
+                            <AiOutlineDelete style={{cursor: 'pointer'}} onClick={()=> this.onClickRemove(res.id)}/>
                           </div>
                         </li>                  
                       </ul>
