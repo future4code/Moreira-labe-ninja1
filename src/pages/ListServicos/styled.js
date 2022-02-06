@@ -46,27 +46,57 @@ export const Container = styled.div`
     .buttons_card {
         margin-top: 20px;
     }
+
     .buttons_card button {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
         padding: 12px 20px;
         border: 0;
         border-radius: 8px;
         margin-right: 10px;
+        position: relative;
+        top: 40%;
         cursor: pointer;
         background-color: transparent;
         transition: transform 0.5s;
+        
         :hover{
         background-color: transparent;
-        color:white;
+        color: #1DAE9D;
         transform: scale(1.3);
       }
 
     }
+    .detalhe {
+      position: relative;
+      top:10px;
+      font-size: 15px;
+
+    }
+
+    .title {
+      position: relative;
+      font-size: 25px;
+      font-weight: bold;
+
+    }
+
+    .logo {
+      width: 20%;
+    }
+
+    
+
+
     .card .price {
+        position: relative;
+        top:50px;
         margin: 10px;
         background-color: #FFFFFF;
-        width: auto;
+        width: 80%;
         color: #1DAE9D;
-        border-radius: 8px;
+        /* border-radius: 8px; */
         padding: 10px;
     }
     .container_cart {
@@ -185,11 +215,12 @@ export const Container = styled.div`
     width: 100%;
     height: 100%;
     color: #FFFFFF;
-    font-size: 20px;
-    font-weight: bold;
+    /* font-size: 20px;
+    font-weight: bold; */
 
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
+    /* justify-content: flex-end; */
     align-items: center;
    
 }
@@ -197,49 +228,76 @@ export const Container = styled.div`
     padding: 10px;
 }
 .back {
-    position: absolute;
-    top: -100px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    /* top: -100px; */
     left:10px;
     background-color: #1DAE9D;
     height: 100%;
     width: 100%;
     color: #FFFFFF;
     text-align: center;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 12px;
+    /* font-weight: bold; */
     padding: 20px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     transform: rotateY(180deg);
 }
+
+.logo2 {
+      width: 10%;
+      position: relative;
+      top: 5px;
+      
+      
+}
+
+.bandeiras{
+  position: relative;
+  top: 50px;
+  font-size: 12px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+
 .typePayments {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 14px;
-
-    justify-content: space-between;
-    margin: 20px auto;
-    font-size: 14px;
+    font-size: 12px;
+    justify-content: center;
+    margin: 5px auto;
+    /* font-size: 14px; */
     flex-wrap: wrap;
 }
 .typePayments ul {
     display: flex;
     align-items: center;
-    text-align: center;
-    background-color:#FFFFFF;
-    padding: 4px;
-    color:#1DAE9D;
-    border-radius: 4px;
+    /* text-align: center; */
+    /* background-color:#FFFFFF; */
+    /* padding: 4px; */
+    color:white;
+    
+    /* border-radius: 4px; */
 
 }
 .typePayments li {
-    background-color:#FFFFFF;
-    padding: 4px;
-    color:#1DAE9D;
-    border-radius: 4px;
+    /* background-color:#FFFFFF; */
+    padding: 1px;
+    margin-left: -20px;
+    margin-bottom: 10px;
+    /* border-radius: 4px; */
 
 }
-.back .price {
-    font-size: 24px;
-}
+  .price2 {
+  position: relative;
+  top: 50%;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+
 `;
+

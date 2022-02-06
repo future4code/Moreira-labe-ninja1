@@ -157,32 +157,37 @@ class ListServicos extends Component {
                   <li className="card">
                       <div className="content">
                           <div className="front">
+                              <div><img className="logo" src= "https://i.postimg.cc/wM13dpkc/Design-sem-nome-5.png"/></div>
                               <div className="title">{res.title}</div>
                               <div className="price">R$ {res.price.toFixed(2)}</div>
 
-                              <div><Moment format="DD/MM/YYYY">{res.dueDate}</Moment></div>
+                              {/* <div><Moment format="DD/MM/YYYY">{res.dueDate}</Moment></div> */}
                               <div className="buttons_card">
-                                <div style={{fontSize:80, color: '#42d6b3'}}><AiOutlineEye/></div>
+                                <div className="detalhe"><p>Detalhes</p></div>
+                                <div style={{fontSize:40, color: '#fffff'}}><AiOutlineEye/></div>
                               </div>
                           </div>
                           <div className="back">
-                              <div className="title">{res.title}</div>
-                              <div className="price">R$ {res.price.toFixed(2)}</div>
-                              <div><Moment format="DD/MM/YYYY">{res.dueDate}</Moment></div>
-                              <div style={{marginTop: 10, fontWeight: 600}}>{res.description}</div>
-                              <div style={{border: '1px solid #FFFFFF',marginTop: 10, padding: 4}}>
-                                <div>Formas de Pagamento</div>
+                          {/* <div><img className="logo2" src= "https://i.postimg.cc/wM13dpkc/Design-sem-nome-5.png"/></div> */}
+                              <div className="title"><img className="logo2" src= "https://i.postimg.cc/wM13dpkc/Design-sem-nome-5.png"/>{res.title}</div>
+                              {/* <div className="price">R$ {res.price.toFixed(2)}</div> */}
+                              {/* <div><Moment format="DD/MM/YYYY">{res.dueDate}</Moment></div> */}
+                              <div style={{marginTop: 5, fontWeight: 600, padding: 50, textAlign: 'justify'}}>{res.description}</div>
+                              <div style={{marginTop: 5, fontWeight: 600}}>Prazo: <Moment format="DD/MM/YYYY">{res.dueDate}</Moment></div>
+                              <div className="bandeiras">
+                                <div style={{marginTop: 10, fontWeight: 600}}>Formas de Pagamento</div>
                                 <div className="typePayments">{res.paymentMethods.map((res)=>(
                                   <ul><li>{res}</li></ul>
                                 ))}</div>
                               </div>
                               <div className="buttons_card">
-                                  <button onClick={()=> this.onClickAdd(res)} ><AiOutlineShoppingCart style={{color:'#FFFFFF', fontSize: '200%'}}/></button>
+                                  <div className="price2">R$ {res.price.toFixed(2)}</div>
+                                  <button className="iconeCarrinho" onClick={()=> this.onClickAdd(res)} ><AiOutlineShoppingCart style={{color:'#FFFFFF', fontSize: '200%', position:"relative", top:"50%"}}/></button>
+                                  {/* <button onClick={()=> this.onClickAdd(res)} ><AiOutlineShoppingCart style={{color:'#FFFFFF', fontSize: '200%'}}/></button> */}
                               </div>
                           </div>
                       </div>
                   </li>
-                                
                 </ul>
                 
               ))}
