@@ -16,7 +16,6 @@ class HeaderHome extends Component {
                 <DivNav>
                   <Link to="/cadservicos"><Botao>Quer ser um ninja</Botao></Link>
                   <Link to="/listservivos"><Botao>Contratar um ninja</Botao></Link>
-                  <DivSacola><Link to="/carrinho"><BsHandbag/></Link></DivSacola>
                 </DivNav> 
                 
             </Header>
