@@ -1,9 +1,13 @@
 import React from 'react'
-import { AppContainer } from './components/AppContainer'
+import RoutesApp from './routes';
+import { GlobalStyled} from './GlobalStyled'
 
 function App() {
 	return (
-        <AppContainer />
+      <div>
+         <GlobalStyled/>
+         < RoutesApp />
+      </div>
 	)
 }
 
