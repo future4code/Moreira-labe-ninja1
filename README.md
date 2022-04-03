@@ -9,6 +9,13 @@
 ## 💻 Sobre o projeto
 
 🐱‍👤 O site LabeNinjas é o projeto final do segundo módulo de frontend do curso de Web Full Stack da Labenu.
+    O projeto consiste em uma plataforma de Marketplace:
+
+A ideia é que a plataforma sirva a 2 tipos de clientes:
+
+1. **Prestador de serviço:** Aquele que quer criar um anúncio para oferecer seu serviço;
+2. **Contratante:** Aquele que contratará o que foi anunciado.  
+
 Foi desenvolvido durante uma semana pelos alunos Carlise Debona, Nina Zorzanello, Jaime Epifanio, Atauan Lima e Henrique Costa, da turma Moreira.
 <br>
 
@@ -45,6 +52,7 @@ Projeto LabeNinjas publicado na plataforma surge:
 - [X] Desistir do serviço adicionado ao carrinho; 
 - [X] Responsividade;
 <br/>
+
 ---
 
 ### Tecnologias🛠
@@ -79,37 +87,37 @@ Por padrão a aplicação rodará localmente na porta 3000.
 
 ## Equipe👨‍💻
 
-<a href="https://github.com/jfranquis">
+<a href="https://github.com/Carlisegd">
  👋🏽 [Entre em contato!]
  <br>
- <sub><b>Carlise Debona</b></sub></a> <a href="https://github.com/jfranquis" title="github"></a>
+ <sub><b>*Carlise Debona*</b></sub></a> <a href="https://github.com/Carlisegd" title="github"></a>
  <br>
  <br>
  
- <a href="https://github.com/thiago-felipe-99">
+ <a href="https://github.com/ninazorzanello">
  👋🏽 [Entre em contato!]
  <br>
- <sub><b>Nina Zorzanello</b></sub></a> <a href="https://github.com/thiago-felipe-99" title="github"></a>
+ <sub><b>*Nina Zorzanello*</b></sub></a> <a href="https://github.com/ninazorzanello" title="github"></a>
  <br>
  <br>
 
-<a href="https://github.com/lausmpc">
+<a href="https://github.com/jaime-github">
  👋🏽 [Entre em contato!]
  <br />
- <sub><b>Jaime Epifanio</b></sub></a> <a href="https://github.com/lausmpc" title="github"></a>
+ <sub><b>*Jaime Epifanio*</b></sub></a> <a href="https://github.com/jaime-github" title="github"></a>
  <br>
  <br>
  
- <a href="https://github.com/thiago-felipe-99">
+ <a href="https://github.com/Atauan">
  👋🏽 [Entre em contato!]
  <br>
- <sub><b>Atauan Lima</b></sub></a> <a href="https://github.com/thiago-felipe-99" title="github"></a>
+ <sub><b>*Atauan Lima*</b></sub></a> <a href="https://github.com/Atauan" title="github"></a>
  <br>
  <br>
 
-<a href="https://github.com/thiago-felipe-99">
+<a href="https://github.com/HEINRICK7">
  👋🏽 [Entre em contato!]
  <br>
- <sub><b>Henrique Costa</b></sub></a> <a href="https://github.com/thiago-felipe-99" title="github"></a>
+ <sub><b>*Henrique Costa*</b></sub></a> <a href="https://github.com/HEINRICK7" title="github"></a>
  <br>
  <br>
