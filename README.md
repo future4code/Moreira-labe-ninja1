@@ -34,7 +34,7 @@ Foi desenvolvido durante uma semana pelos alunos Carlise Debona, Nina Zorzanello
 
 Projeto LabeNinjas publicado na plataforma surge:
 
-#### - [Surge](https://silent-print.surge.sh/)
+#### - [Link: LabeNinjas](https://silent-print.surge.sh/)
 <br/>
 
 ---
