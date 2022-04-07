@@ -88,35 +88,35 @@ Por padrão a aplicação rodará localmente na porta 3000.
 ## Equipe👨‍💻
 
 <a href="https://github.com/Carlisegd">
- 👋🏽 [Entre em contato!]
+ 👋🏽 Entre em contato!
  <br>
  <sub><b>*Carlise Debona*</b></sub></a> <a href="https://github.com/Carlisegd" title="github"></a>
  <br>
  <br>
  
  <a href="https://github.com/ninazorzanello">
- 👋🏽 [Entre em contato!]
+ 👋🏽 Entre em contato!
  <br>
  <sub><b>*Nina Zorzanello*</b></sub></a> <a href="https://github.com/ninazorzanello" title="github"></a>
  <br>
  <br>
 
 <a href="https://github.com/jaime-github">
- 👋🏽 [Entre em contato!]
+ 👋🏽 Entre em contato!
  <br />
  <sub><b>*Jaime Epifanio*</b></sub></a> <a href="https://github.com/jaime-github" title="github"></a>
  <br>
  <br>
  
  <a href="https://github.com/Atauan">
- 👋🏽 [Entre em contato!]
+ 👋🏽 Entre em contato!
  <br>
  <sub><b>*Atauan Lima*</b></sub></a> <a href="https://github.com/Atauan" title="github"></a>
  <br>
  <br>
 
 <a href="https://github.com/HEINRICK7">
- 👋🏽 [Entre em contato!]
+ 👋🏽 Entre em contato!
  <br>
  <sub><b>*Henrique Costa*</b></sub></a> <a href="https://github.com/HEINRICK7" title="github"></a>
  <br>
